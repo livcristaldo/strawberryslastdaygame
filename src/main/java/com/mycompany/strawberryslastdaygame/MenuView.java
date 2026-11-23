@@ -1,24 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.strawberryslastdaygame;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-
-/**
- *
- * @author livia_y8wdy01
- */
 
 public class MenuView extends VBox {
 
     public Label titulo = new Label("Strawberry's Last Day");
 
     public Button jogar = new Button("JOGAR");
-    public Button options = new Button("OPTIONS");
+    public Button ranking = new Button("RANKING");
+    public Button creditos = new Button("CRÉDITOS");
+    public Button sair = new Button("SAIR");
 
+    public MenuView() {
+        setAlignment(Pos.CENTER);
+        setSpacing(20);
+
+        getChildren().addAll(titulo, jogar, ranking, creditos, sair);
+    }
 }
-

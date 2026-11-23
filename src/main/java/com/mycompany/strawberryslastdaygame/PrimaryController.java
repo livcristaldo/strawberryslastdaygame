@@ -1,18 +1,28 @@
 package com.mycompany.strawberryslastdaygame;
 
+import java.io.IOException;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 
 public class PrimaryController {
 
     @FXML
-    private Label titulo;
+    private void vaiJogar() throws IOException {
+        App.setRoot("gameplay");
+    }
 
     @FXML
-    private Button jogar;
+    private void vaiRanking() throws IOException {
+        App.setRoot("ranking");
+    }
 
     @FXML
-    private Button sair;
+    private void vaiCreditos() throws IOException {
+        App.setRoot("creditos");
+    }
 
+    @FXML
+    private void sair() {
+        Platform.exit();
+    }
 }
